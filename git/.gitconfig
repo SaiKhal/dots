@@ -1,0 +1,6 @@
+[user]
+	name = Masai Young
+	email = masai.young@gmail.com
+
+[rebase]
+	autoSquash = true

@@ -106,12 +106,12 @@ stow_dotfiles() {
     cd "$DOTFILES_DIR"
 
     # Backup existing dotfiles to avoid stow conflicts
-    for f in .zshrc .tmux.conf; do
+    for f in .zshrc .tmux.conf .gitconfig; do
         [ -f "$HOME/$f" ] && [ ! -L "$HOME/$f" ] && mv "$HOME/$f" "$HOME/${f}.bak" && log_info "Backed up ~/$f to ~/${f}.bak"
     done
 
     # List of packages to stow (directories in dotfiles repo)
-    local packages=(zsh nvim tmux claude ghostty wezterm ssh)
+    local packages=(zsh nvim tmux claude ghostty wezterm ssh git)
 
     for pkg in "${packages[@]}"; do
         if [[ -d "$pkg" ]]; then
