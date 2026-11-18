@@ -137,6 +137,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # Git workflow shortcuts
+alias gs='git-spice'                                              # git-spice
 alias gfu='git commit --fixup'                                    # Create fixup commit
 alias fix='git diff --name-only | uniq | xargs $EDITOR'          # Edit all changed files
 
